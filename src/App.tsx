@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import CategoryPage from './pages/Category';
 import BookmarksPage from './pages/Bookmarks';
 import SearchPage from './pages/Search';
+import ItemDetailPage from './pages/ItemDetail';
 import { aptitudeItems, codingItems, interviewItems } from './data/content';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="interview" element={<CategoryPage title="Interview Tips" items={interviewItems} />} />
           <Route path="bookmarks" element={<BookmarksPage />} />
           <Route path="search" element={<SearchPage />} />
+          <Route path="item/:id" element={<ItemDetailPage />} />
         </Route>
       </Routes>
     </HashRouter>
