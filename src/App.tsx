@@ -7,8 +7,9 @@ import SearchPage from './pages/Search';
 import { aptitudeItems, codingItems, interviewItems } from './data/content';
 
 function App() {
+  const basename = '/placement-prep-hub/';
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
