@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   const cards = [
-    { to: '/aptitude', title: 'Aptitude', desc: 'Quant, reasoning, and math shortcuts.' },
-    { to: '/coding', title: 'Coding', desc: 'DSA patterns, templates, and problems.' },
-    { to: '/interview', title: 'Interview Tips', desc: 'Behavioral, system design, and resume.' },
+    { to: '/placement', title: 'Placement', desc: 'Aptitude, Coding, Interview tips — all in one place.' },
+    { to: '/bookmarks', title: 'Bookmarks', desc: 'Your saved items for quick revision.' },
   ];
 
   return (

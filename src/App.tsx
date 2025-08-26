@@ -5,6 +5,7 @@ import CategoryPage from './pages/Category';
 import BookmarksPage from './pages/Bookmarks';
 import SearchPage from './pages/Search';
 import ItemDetailPage from './pages/ItemDetail';
+import PlacementPage from './pages/Placement';
 import { aptitudeItems, codingItems, interviewItems } from './data/content';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="placement" element={<PlacementPage />} />
           <Route path="aptitude" element={<CategoryPage title="Aptitude" items={aptitudeItems} />} />
           <Route path="coding" element={<CategoryPage title="Coding" items={codingItems} />} />
           <Route path="interview" element={<CategoryPage title="Interview Tips" items={interviewItems} />} />

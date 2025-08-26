@@ -28,9 +28,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden sm:flex items-center gap-4 text-sm">
-          <Link to="/aptitude" className="hover:underline">Aptitude</Link>
-          <Link to="/coding" className="hover:underline">Coding</Link>
-          <Link to="/interview" className="hover:underline">Interview</Link>
+          <Link to="/placement" className="hover:underline">Placement</Link>
           <Link to="/bookmarks" className="hover:underline">Bookmarks</Link>
         </nav>
 
