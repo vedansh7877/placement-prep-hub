@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import Home from './pages/Home';
 import CategoryPage from './pages/Category';
@@ -7,9 +7,8 @@ import SearchPage from './pages/Search';
 import { aptitudeItems, codingItems, interviewItems } from './data/content';
 
 function App() {
-  const basename = '/placement-prep-hub/';
   return (
-    <BrowserRouter basename={basename}>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
@@ -20,7 +19,7 @@ function App() {
           <Route path="search" element={<SearchPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
