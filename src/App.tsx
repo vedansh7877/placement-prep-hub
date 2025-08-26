@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import Home from './pages/Home';
+import CategoryPage from './pages/Category';
+import BookmarksPage from './pages/Bookmarks';
+import SearchPage from './pages/Search';
+import { aptitudeItems, codingItems, interviewItems } from './data/content';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="aptitude" element={<CategoryPage title="Aptitude" items={aptitudeItems} />} />
+          <Route path="coding" element={<CategoryPage title="Coding" items={codingItems} />} />
+          <Route path="interview" element={<CategoryPage title="Interview Tips" items={interviewItems} />} />
+          <Route path="bookmarks" element={<BookmarksPage />} />
+          <Route path="search" element={<SearchPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
