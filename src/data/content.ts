@@ -55,6 +55,19 @@ Practice
     link: 'https://byjus.com/quantitative-aptitude/percentage/'
   },
   {
+    id: 'apt-1c',
+    category: 'aptitude',
+    title: 'Profit & Loss',
+    description: 'Markup/discount, CP/SP relations, successive changes.',
+    tags: ['percentages', 'profit-loss'],
+    content: `Formulas
+
+- Profit% = (SP-CP)/CP * 100
+- Discount & markup combine with % change formula
+- Successive profit/loss uses a+b+ab/100`,
+    link: 'https://www.geeksforgeeks.org/aptitude-profit-and-loss/'
+  },
+  {
     id: 'apt-2',
     category: 'aptitude',
     title: 'Time & Work',
@@ -94,6 +107,18 @@ Rate = 1/10 + 1/15 = 1/6 => 6 days.`,
 
 - Convert days to rates; apply new rate for remaining work after change`,
     link: 'https://byjus.com/quantitative-aptitude/time-and-work/'
+  },
+  {
+    id: 'apt-2c',
+    category: 'aptitude',
+    title: 'Time, Speed & Distance',
+    description: 'Relative speed, trains, boats & streams.',
+    tags: ['time-distance', 'relative-speed', 'boats-streams'],
+    content: `Formulas
+
+- Speed = Distance/Time; Relative speed adds/subtracts on same/opposite direction
+- Boats: downstream u+v, upstream u-v`,
+    link: 'https://www.indiabix.com/aptitude/time-and-distance/'
   },
   {
     id: 'apt-3',
@@ -153,6 +178,29 @@ Example
 
 If A:B = 2:3 and B:C = 4:5, then A:C = 8:15.`,
     link: 'https://byjus.com/aptitude/ratio-and-proportion/'
+  },
+  {
+    id: 'apt-4a',
+    category: 'aptitude',
+    title: 'Averages & Weighted Averages',
+    description: 'Combine groups and compute overall averages quickly.',
+    tags: ['averages', 'weighted'],
+    content: `Tips
+
+- Weighted avg = sum(w_i * x_i)/sum(w_i)
+- Use alligation for mixtures`,
+    link: 'https://www.indiabix.com/aptitude/average/'
+  },
+  {
+    id: 'apt-4b',
+    category: 'aptitude',
+    title: 'Mixtures & Alligation',
+    description: 'Alligation rule to find ratio of mixing solutions.',
+    tags: ['mixture', 'alligation'],
+    content: `Alligation
+
+- Draw the alligation cross to derive mixing ratios`,
+    link: 'https://www.geeksforgeeks.org/mixture-and-alligation/'
   },
   {
     id: 'apt-5',
@@ -367,6 +415,62 @@ Time: O(n)`,
 - Push neighbors with dist+1; mark visited on push`,
     link: 'https://cp-algorithms.com/graph/breadth-first-search.html'
   },
+  {
+    id: 'code-14',
+    category: 'coding',
+    title: 'Bit Manipulation Basics',
+    description: 'Set/clear/toggle bits; bitmasks for subsets.',
+    tags: ['bit-manipulation'],
+    content: `Cheatsheet
+
+- Set: x | (1<<k); Clear: x & ~(1<<k); Toggle: x ^ (1<<k)
+- Check bit: (x>>k)&1`,
+    link: 'https://leetcode.com/tag/bit-manipulation/'
+  },
+  {
+    id: 'code-15',
+    category: 'coding',
+    title: 'Monotonic Stack',
+    description: 'Next greater/smaller element, histogram problems.',
+    tags: ['stack', 'monotonic'],
+    content: `Pattern
+
+- Maintain stack with monotone property; pop while broken; compute ranges`,
+    link: 'https://leetcode.com/tag/monotonic-stack/'
+  },
+  {
+    id: 'code-16',
+    category: 'coding',
+    title: 'Union-Find (Disjoint Set)',
+    description: 'Connectivity queries with path compression + union by rank.',
+    tags: ['dsu', 'union-find'],
+    content: `API
+
+- find(x) with path compression; union(a,b) by rank/size`,
+    link: 'https://cp-algorithms.com/data_structures/disjoint_set_union.html'
+  },
+  {
+    id: 'code-17',
+    category: 'coding',
+    title: 'Trie (Prefix Tree)',
+    description: 'String prefix lookups and word problems.',
+    tags: ['trie', 'strings'],
+    content: `Notes
+
+- Node: children map + end flag; insert/search/delete`,
+    link: 'https://leetcode.com/tag/trie/'
+  },
+  {
+    id: 'code-18',
+    category: 'coding',
+    title: 'Heaps & Priority Queues',
+    description: 'K largest, merge k lists, Dijkstra base.',
+    tags: ['heap', 'priority-queue'],
+    content: `Use cases
+
+- Top-k; streaming medians; Dijkstra` ,
+    link: 'https://leetcode.com/tag/heap/'
+  },
 ];
 
 export const interviewItems: HubItem[] = [
@@ -521,6 +625,65 @@ export const interviewItems: HubItem[] = [
 - SBI (Situation-Behavior-Impact)
 - Nonviolent Communication (Observation-Feeling-Need-Request)`,
     link: 'https://hbr.org/2017/01/the-right-way-to-hold-people-accountable'
+  },
+  {
+    id: 'int-13',
+    category: 'interview',
+    title: 'Load Balancers',
+    description: 'Layer 4/7, algorithms (RR, least conn), health checks.',
+    tags: ['system-design', 'load-balancing'],
+    content: `Concepts
+
+- L4 vs L7; health checks; sticky sessions
+- Algorithms: round-robin, least-connections, weighted`,
+    link: 'https://www.nginx.com/learn/load-balancing/'
+  },
+  {
+    id: 'int-14',
+    category: 'interview',
+    title: 'CDN (Content Delivery Network)',
+    description: 'Edge caching, cache keys, invalidation, TLS.',
+    tags: ['cdn', 'caching'],
+    content: `Notes
+
+- Cache keys: path+query+headers; invalidation via purge
+- TLS termination at edge; origin shielding`,
+    link: 'https://www.cloudflare.com/learning/cdn/what-is-a-cdn/'
+  },
+  {
+    id: 'int-15',
+    category: 'interview',
+    title: 'Message Queues & Async Processing',
+    description: 'Kafka/RabbitMQ/SQS patterns, at-least-once processing.',
+    tags: ['queues', 'async'],
+    content: `Patterns
+
+- Producers/consumers; retry + DLQ; idempotency keys`,
+    link: 'https://kafka.apache.org/documentation/'
+  },
+  {
+    id: 'int-16',
+    category: 'interview',
+    title: 'Database Sharding & Replication',
+    description: 'Horizontal partitioning, rebalancing, consistency.',
+    tags: ['database', 'sharding', 'replication'],
+    content: `Consider
+
+- Hash vs range sharding; resharding; secondary indexes
+- Read replicas; leader/follower`,
+    link: 'https://www.mongodb.com/basics/sharding'
+  },
+  {
+    id: 'int-17',
+    category: 'interview',
+    title: 'Auth: Sessions, JWT, OAuth2',
+    description: 'Session stores, JWT pros/cons, OAuth flows.',
+    tags: ['auth', 'oauth', 'jwt'],
+    content: `Notes
+
+- Sessions: server-side store; JWT: stateless but revocation hard
+- OAuth2 flows: auth code with PKCE for SPAs`,
+    link: 'https://oauth.net/2/'
   },
 ];
 
