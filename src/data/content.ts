@@ -242,6 +242,67 @@ Tip: For small R and T, CI ≈ SI + (P*(R/100)^2)/2`,
 - Compare ratios instead of raw numbers when possible`,
     link: 'https://www.indiabix.com/data-interpretation/questions-and-answers/'
   },
+  {
+    id: 'apt-1d',
+    category: 'aptitude',
+    title: 'Marked Price, Discount, Selling Price',
+    description: 'Relating MP, discount%, SP and profit/loss%.',
+    tags: ['percentages', 'profit-loss'],
+    content: `Relations
+
+MP —discount%→ SP ⇒ SP = MP(1 - d/100)
+Profit% on CP: p = (SP-CP)/CP*100
+Given any two, solve the third by equation.`,
+    link: 'https://www.indiabix.com/aptitude/percentage/'
+  },
+  {
+    id: 'apt-1e',
+    category: 'aptitude',
+    title: 'Population Growth/Depreciation %',
+    description: 'Successive percentage rise/fall across years.',
+    tags: ['percentages', 'growth'],
+    content: `If population P grows r% for t years: P_t = P(1+r/100)^t
+Depreciation uses (1-r/100)^t. Use logs for quick estimates.`,
+    link: 'https://byjus.com/quantitative-aptitude/percentage/'
+  },
+  {
+    id: 'apt-1f',
+    category: 'aptitude',
+    title: 'Exam Scores and Percentage Change',
+    description: 'Find required marks to reach a target % after retest.',
+    tags: ['percentages', 'exams'],
+    content: `Let total T, current marks M, target x% after extra Y marks:
+Solve (M+Y)/T = x/100 ⇒ Y = xT/100 - M.`,
+    link: 'https://www.cuemath.com/learn/maths/percentage/'
+  },
+  {
+    id: 'apt-2d',
+    category: 'aptitude',
+    title: 'Alternate Days Work',
+    description: 'Workers alternating days with different rates.',
+    tags: ['time-work'],
+    content: `Compute two-day work chunk = r_A + r_B. Divide total by chunk;
+handle leftover with the next worker’s rate.`,
+    link: 'https://www.geeksforgeeks.org/aptitude-time-and-work-concepts-formulas/'
+  },
+  {
+    id: 'apt-2e',
+    category: 'aptitude',
+    title: 'Wages and Work Sharing',
+    description: 'Split wages proportional to work done (rates×time).',
+    tags: ['time-work', 'wages'],
+    content: `Total wage W, contribution_i = r_i * t_i ⇒ share_i = W * contribution_i / Σcontribution.`,
+    link: 'https://www.indiabix.com/aptitude/time-and-work/'
+  },
+  {
+    id: 'apt-2f',
+    category: 'aptitude',
+    title: 'Efficiency Change Over Time',
+    description: 'Rate increases/decreases after some days.',
+    tags: ['time-work', 'efficiency'],
+    content: `Work = r_1 * t_1 + r_2 * t_2. Convert “x% more/less efficient” to rate multipliers.`,
+    link: 'https://byjus.com/quantitative-aptitude/time-and-work/'
+  },
 ];
 
 export const codingItems: HubItem[] = [
