@@ -32,11 +32,34 @@ Practice
     link: 'https://www.cuemath.com/percentages/'
   },
   {
+    id: 'apt-1a',
+    category: 'aptitude',
+    title: 'Percentage Increase/Decrease Word Problems',
+    description: 'Solve net increase/decrease and reverse percentage questions.',
+    tags: ['percentages', 'word-problems'],
+    content: `Tips
+
+- Reverse %: If final is F after x% incr on B, then B = F / (1+x/100)
+- Successive changes: use net = a + b + ab/100`,
+    link: 'https://www.indiabix.com/aptitude/percentage/'
+  },
+  {
+    id: 'apt-1b',
+    category: 'aptitude',
+    title: 'Successive Discounts',
+    description: 'Compute equivalent discount for multiple discounts.',
+    tags: ['percentages', 'discounts'],
+    content: `Equivalent discount
+
+- d1 then d2 => net discount d = d1 + d2 - (d1*d2)/100`,
+    link: 'https://byjus.com/quantitative-aptitude/percentage/'
+  },
+  {
     id: 'apt-2',
     category: 'aptitude',
     title: 'Time & Work',
     description: 'Pipes and cisterns, efficiency method, and solved examples.',
-    tags: ['time', 'work', 'quant'],
+    tags: ['time-work', 'pipes', 'cisterns'],
     content: `Key ideas
 
 - Work = Rate * Time
@@ -48,6 +71,29 @@ Practice
 A completes a job in 10 days, B in 15 days. Together?
 Rate = 1/10 + 1/15 = 1/6 => 6 days.`,
     link: 'https://www.geeksforgeeks.org/aptitude-time-and-work-concepts-formulas/'
+  },
+  {
+    id: 'apt-2a',
+    category: 'aptitude',
+    title: 'Pipes & Cisterns',
+    description: 'Inlet/outlet rates and net fill/empty time.',
+    tags: ['time-work', 'pipes', 'cisterns'],
+    content: `Approach
+
+- Sum inlets, subtract outlets; watch for leak terms
+- Convert to rates per hour and combine linearly`,
+    link: 'https://www.indiabix.com/aptitude/pipes-and-cistern/'
+  },
+  {
+    id: 'apt-2b',
+    category: 'aptitude',
+    title: 'Efficiency Change Problems',
+    description: 'Workers with changing efficiency and partial completion.',
+    tags: ['time-work', 'efficiency'],
+    content: `Technique
+
+- Convert days to rates; apply new rate for remaining work after change`,
+    link: 'https://byjus.com/quantitative-aptitude/time-and-work/'
   },
   {
     id: 'apt-3',
@@ -65,6 +111,31 @@ Example
 
 Two fair coins: P(exactly one head) = 2/4 = 1/2.`,
     link: 'https://www.khanacademy.org/math/statistics-probability/probability-library'
+  },
+  {
+    id: 'apt-3a',
+    category: 'aptitude',
+    title: 'Conditional Probability & Bayes',
+    description: 'Tree diagrams, conditional events, Bayes theorem.',
+    tags: ['probability', 'bayes'],
+    content: `Bayes
+
+P(A|B) = P(B|A)P(A) / P(B)
+
+Tip: Expand P(B) by partition if needed.`,
+    link: 'https://www.khanacademy.org/math/statistics-probability/probability-library' 
+  },
+  {
+    id: 'apt-3b',
+    category: 'aptitude',
+    title: 'Permutations & Combinations Tricks',
+    description: 'Counting with restrictions and identical items.',
+    tags: ['combinatorics', 'counting'],
+    content: `Tips
+
+- Use slots or stars-and-bars
+- Divide by factorials for identical items`,
+    link: 'https://www.geeksforgeeks.org/permutations-and-combinations/'
   },
   {
     id: 'apt-4',
@@ -237,6 +308,65 @@ Time: O(n)`,
 - Use bucket arrays by frequency or a min-heap of size K`,
     link: 'https://leetcode.com/problems/top-k-frequent-elements/'
   },
+  {
+    id: 'code-9',
+    category: 'coding',
+    title: 'Kadane’s Algorithm (Maximum Subarray)',
+    description: 'Dynamic programming on the fly for max subarray sum.',
+    tags: ['dp', 'arrays'],
+    content: `Idea
+
+- cur = max(a[i], cur + a[i])
+- best = max(best, cur)`,
+    link: 'https://leetcode.com/problems/maximum-subarray/'
+  },
+  {
+    id: 'code-10',
+    category: 'coding',
+    title: 'Fast & Slow Pointers',
+    description: 'Cycle detection, middle of list, etc.',
+    tags: ['linked-list', 'two-pointers'],
+    content: `Use cases
+
+- Floyd’s cycle detection
+- Middle of list: fast+=2, slow+=1`,
+    link: 'https://leetcode.com/problems/linked-list-cycle/'
+  },
+  {
+    id: 'code-11',
+    category: 'coding',
+    title: 'Prefix Sums & Ranges',
+    description: 'Prefix sums, difference arrays for range updates.',
+    tags: ['prefix-sum', 'arrays'],
+    content: `Tips
+
+- ps[i] = sum(0..i-1)
+- Range sum [l,r] = ps[r+1] - ps[l]`,
+    link: 'https://leetcode.com/tag/prefix-sum/'
+  },
+  {
+    id: 'code-12',
+    category: 'coding',
+    title: 'Backtracking: Subsets & Permutations',
+    description: 'DFS templates for subsets and permutations.',
+    tags: ['backtracking', 'dfs'],
+    content: `Patterns
+
+- Subsets: choose/skip
+- Permutations: mark used, build path`,
+    link: 'https://leetcode.com/explore/learn/card/recursion-i/'
+  },
+  {
+    id: 'code-13',
+    category: 'coding',
+    title: 'Shortest Path: BFS on Unweighted Graphs',
+    description: 'Use BFS to compute shortest path length.',
+    tags: ['graph', 'bfs', 'shortest-path'],
+    content: `Tips
+
+- Push neighbors with dist+1; mark visited on push`,
+    link: 'https://cp-algorithms.com/graph/breadth-first-search.html'
+  },
 ];
 
 export const interviewItems: HubItem[] = [
@@ -319,6 +449,78 @@ export const interviewItems: HubItem[] = [
 - Status: 2xx success, 3xx redirect, 4xx client, 5xx server
 - TLS handshake basics; SameSite cookies; CORS preflight`,
     link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview'
+  },
+  {
+    id: 'int-7',
+    category: 'interview',
+    title: 'CAP Theorem & Consistency Models',
+    description: 'Consistency, Availability, Partition tolerance; eventual vs strong.',
+    tags: ['system-design', 'consistency'],
+    content: `Notes
+
+- CAP: choose 2 under partition
+- Consistency models: strong, eventual, read-your-writes, monotonic`,
+    link: 'https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html'
+  },
+  {
+    id: 'int-8',
+    category: 'interview',
+    title: 'Caching Strategies',
+    description: 'Write-through, write-back, TTLs, invalidation patterns.',
+    tags: ['system-design', 'caching'],
+    content: `Patterns
+
+- Cache-aside; Write-through vs write-back
+- Invalidation: time-based TTL vs event-driven`,
+    link: 'https://aws.amazon.com/caching/'
+  },
+  {
+    id: 'int-9',
+    category: 'interview',
+    title: 'Database Indexing Basics',
+    description: 'B-Tree, hash indexes, covering index, composite keys.',
+    tags: ['database', 'indexing'],
+    content: `Tips
+
+- Use selective columns; beware write overhead
+- Composite index order matters`,
+    link: 'https://use-the-index-luke.com/'
+  },
+  {
+    id: 'int-10',
+    category: 'interview',
+    title: 'Design News Feed',
+    description: 'Fan-out models, ranking, caching, denormalization.',
+    tags: ['system-design', 'feed'],
+    content: `Approach
+
+- Fan-out on write vs read
+- Materialized timelines; push/pull hybrids`,
+    link: 'https://github.com/donnemartin/system-design-primer#system-design-topics-start-here'
+  },
+  {
+    id: 'int-11',
+    category: 'interview',
+    title: 'Design Chat/Messenger',
+    description: 'WebSockets, presence, ordering, delivery semantics.',
+    tags: ['system-design', 'realtime'],
+    content: `Consider
+
+- WS or long-polling; delivery acks; retries
+- Ordering per-conversation; persistence`,
+    link: 'https://ably.com/topic/websockets'
+  },
+  {
+    id: 'int-12',
+    category: 'interview',
+    title: 'Behavioral: Conflict & Feedback',
+    description: 'Frameworks to discuss conflict and feedback positively.',
+    tags: ['behavioral'],
+    content: `Frameworks
+
+- SBI (Situation-Behavior-Impact)
+- Nonviolent Communication (Observation-Feeling-Need-Request)`,
+    link: 'https://hbr.org/2017/01/the-right-way-to-hold-people-accountable'
   },
 ];
 
