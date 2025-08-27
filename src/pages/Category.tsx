@@ -48,6 +48,7 @@ export default function CategoryPage({ title, items }: { title: string; items: H
     <div className="space-y-6">
       <div className="flex items-center gap-3">
         <h1 className="text-2xl font-semibold flex-1">{title}</h1>
+        <span className="text-xs text-gray-500">{filtered.length} topics</span>
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
