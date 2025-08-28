@@ -1,0 +1,30 @@
+name: Package full project (with node_modules and .git)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Create archive
+        run: |
+          cd ..
+          zip -r placement-prep-hub-full.zip placement-hub
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: placement-prep-hub-full
+          path: ../placement-prep-hub-full.zip
+          if-no-files-found: error
